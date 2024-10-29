@@ -1,0 +1,89 @@
+*{
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+:root{
+    --white: #F5F5F5;
+    --grey: #dddddd;
+    --light-grey: #EBEBEB;
+    --red: #BF3111;
+    --green: #60b307;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#header{
+    height: 3rem;
+    padding: 0 1rem 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 30.5rem;
+    height: 22.6875rem;
+
+    background-color: var(--grey);
+}
+
+#activities{
+    border-radius: 1rem;
+    background-color: var(--white);
+    height: 15rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0 1rem 0 1rem;
+}
+
+.activity{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--light-grey);
+}
+
+.footer{
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: absolute;
+    bottom: 0;
+    padding: 0 1rem 0 1rem;
+    gap: 0.5rem;
+}
+
+.register-activity-input{
+    border-radius: 0.5rem;
+    height: 2.6875rem;
+    width: 100%;
+    padding: 1rem;
+    border: none;
+}
+
+#add-task-button{
+    border-radius: 1rem;
+    border: none;
+    width: 2.6875rem;
+    height: 2.6875rem;
+    background-color: var(--red);
+    color: var(--green);
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.icon-button {
+    cursor: pointer;
+}

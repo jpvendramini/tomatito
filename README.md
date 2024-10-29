@@ -1,0 +1,1 @@
+Extensão de navegador para registrar, cronometrar, editar e copiar atividades, com armazenamento local dos dados.
