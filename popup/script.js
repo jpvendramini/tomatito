@@ -8,6 +8,7 @@ const playIconPath = "../icons/play-button.svg";
 const pauseIconPath = "../icons/pause.svg";
 const editIconPath = "../icons/edit.svg";
 const trashIconPath = "../icons/trash.svg";
+const emptyImagePath = "../imgs/empty.png";
 
 function addOrUpdateTask() {
     const inputValue = document.getElementById("register-activity-input").value;
@@ -50,6 +51,15 @@ function displayTasks() {
     let tasks = JSON.parse(localStorage.getItem("tasks"));
     if (!Array.isArray(tasks)) {
         tasks = [];
+    }
+
+    if (tasks.length === 0) {
+        const emptyImage = document.createElement("img");
+        emptyImage.src = emptyImagePath;
+        emptyImage.alt = "No tasks available";
+        emptyImage.classList.add("empty-image");
+        tasksContainer.appendChild(emptyImage);
+        return;
     }
     
     tasks.forEach(task => {

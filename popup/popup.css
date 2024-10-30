@@ -83,25 +83,44 @@ body {
 }
 
 #add-task-button{
-    border-radius: 50%;
+    border-radius: 1rem;
     border: none;
     width: 2.6875rem;
     height: 2.6875rem;
-    background-color: green;
-    color: rgb(0, 75, 0);
+    background-color: rgb(156, 156, 156);
+    color: var(--white);
     font-weight: 900;
     font-size: 1.5rem;
     cursor: pointer;
 }
 
 #add-task-button:hover{
-    transition: .2s ease-in;
-    background-color: rgb(180, 6, 6);
-    color: rgb(70, 167, 70);
+    background-color: rgb(77, 77, 77);
+    transition: .2s ease-in-out;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0);
 }
+
 
 .icon-button {
     cursor: pointer;
+    background-color: var(--light-grey);
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 8px;
+}
+
+.icon-button:hover{
+    background-color: var(--grey);
+    transition: .2s ease-in-out;
+    box-shadow: 1px 1px 3px rgb(0, 0, 0, 0.3);
+}
+
+.empty-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 230px;
+    opacity: 0.5;
 }
 
 /* width */
