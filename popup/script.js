@@ -61,10 +61,10 @@ function displayTasks() {
         const playPauseIcon = task.startDate && !task.endDate ? pauseIconPath : playIconPath;
 
         taskElement.innerHTML = `
-            <span><img src="${playPauseIcon}" class="icon-button play-button" alt="Play/Pause" width="24" height="24"></span>
-            <span>${task.title}</span>
-            <span class="task-timer">${formatTime(task.elapsedTime)}</span>
-            <span>
+            <span style="flex: .5;"><img src="${playPauseIcon}" class="icon-button play-button" alt="Play/Pause" width="24" height="24"></span>
+            <span style="flex: 3;" title="${task.title}">${task.title}</span>
+            <span style="flex: 1;" class="task-timer">${formatTime(task.elapsedTime)}</span>
+            <span style="display: flex; gap: 0.5rem; justify-content: end; flex: 0.8;">
                 <img src="${editIconPath}" class="icon-button edit-button" alt="Edit" width="24" height="24">
                 <img src="${trashIconPath}" class="icon-button delete-button" alt="Delete" width="24" height="24">
             </span>`;
@@ -85,6 +85,8 @@ function displayTasks() {
             startTimer(task.id);
         }
     });
+
+    calculateTotalTime();
 }
 
 function copyActivitiesToClipboard() {
